@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+</body>
+</html>
+<head>
+<link rel="stylesheet" href="{{ STATIC_URL }}/static/index.css">
+
+</head>
+
+<body class="archive">
+
+<div style="float: right; color: #fff;">
+<p><a style="color: #fff" href="{{ STATIC_URL }}/a">Аутентификация</a></p>
+<p><a style="color: #fff" href="{{ STATIC_URL }}/reg">Регистрация</a></p>
+<p><a style="color: #fff" href="{{ STATIC_URL }}/article/new">Написать статью</a></p>
+</div>
+<div class="header">
+<img src="{{ STATIC_URL }}/static/logo1.png" height="50" width="auto" />
+</div>
+
+
+<div>
+{% for post in posts %}
+<div class = "one-post" style="border: dashed; border-radius: 7px;
+margin-bottom: 15px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 5px;">
+
+<input style="float:right; margin-top: 10px;" class="fold-button" type="submit" value="Свернуть">
+
+<a class="post-title" href="{{ STATIC_URL }}/article/{{post.id}} ">
+<h2 class="post-title">{{ post.id }}. {{ post.title }} </h2>
+</a>
+
+<div style="margin-bottom: 20px;">
+<div class="article-author">{{ post.author.username }}</div>
+<div class="article-created-date" >{{ post.created_date }}</div>
+</div>
+<div class="article-text" >{{ post.get_excerpt }} </div>
+
+
+</div>
+{% endfor %}
+
+</div>
+<script src="{{ STATIC_URL }}/static/js/fold-post.js"></script>
+</body>

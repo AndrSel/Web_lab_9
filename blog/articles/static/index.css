@@ -1,0 +1,59 @@
+body{
+background: #44a16b;
+font-family: Tahoma, Arial, sans-serif;
+color: #ffffff;
+padding-left: 10%;
+padding-right: 10%;
+}
+
+.fold-button input{
+float: right;
+color: black;
+}
+
+.header img {
+display: block;
+width: 150px;
+height: auto;
+margin-left: auto;
+margin-right: auto;
+margin-bottom: 30px;
+}
+
+.one-post{
+border: dashed; border-radius: 7px;
+margin-bottom: 15px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 5px;
+}
+
+.post-title {
+color: #fff;
+}
+
+.article-author {
+width: 50%;
+float: left;
+}
+
+.article-created-date {
+width: 50%;
+float: right;
+text-align: right;
+}
+
+.article-text{
+
+}
+
+.one-post-folded .article-author{
+display: none;
+}
+
+.one-post-folded .article-created-date{
+display: none;
+}
+.one-post-folded .article-text{
+display: none;
+}
